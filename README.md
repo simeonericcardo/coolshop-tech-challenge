@@ -4,12 +4,13 @@ Lo script riceve in input il percorso di un file csv da utilizzare, contenente l
 
 Es. file csv
 
-Id,Article Name,Quantity,Unit price,Percentage discount,Buyer
-1,Coke,10,1,0,Mario Rossi
-2,Coke,15,2,0,Luca Neri
-3,Fanta,5,3,2,Luca Neri
-4,Water,20,1,10,Mario Rossi
-5,Fanta,1,4,15,Andrea Bianchi
+Id,Article Name,Quantity,Unit price,Percentage discount,Buyer  
+
+1,Coke,10,1,0,Mario Rossi  
+2,Coke,15,2,0,Luca Neri  
+3,Fanta,5,3,2,Luca Neri  
+4,Water,20,1,10,Mario Rossi  
+5,Fanta,1,4,15,Andrea Bianchi  
 
 Lo script deve dare in output i seguenti dati:
 - Record con importo totale più alto

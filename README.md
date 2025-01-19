@@ -1,11 +1,10 @@
-# coolshop-tech-challenge
-Si implementi uno script da eseguire da linea di comando in Nodejs.  
+# Coolshop-tech-challenge
+Si implementi uno script da eseguire da linea di comando in NodeJs.  
 Lo script riceve in input il percorso di un file csv da utilizzare, contenente la lista di ordini di un sito ecommerce.
 
-Es. file csv
+Es. file csv  
 
 Id,Article Name,Quantity,Unit price,Percentage discount,Buyer  
-
 1,Coke,10,1,0,Mario Rossi  
 2,Coke,15,2,0,Luca Neri  
 3,Fanta,5,3,2,Luca Neri  

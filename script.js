@@ -2,19 +2,13 @@
 const fs=require("fs");
 const parser=require("csv-parser");
 
+const args=process.argv.slice(2);
+if (args.length != 1) {process.exit(1);}
 
-function calculateOutputs(order){
-    let totalPrice=order.quantity * order.unitPrice;
-    let totalPriceWithDiscount=totalPrice - (totalPrice * order.percentageDiscount/100);
-    return {totalPrice,totalPriceWithDiscount};
-}
-
-
-function processCSV(file_path){
-
+function processCSV(file_path) {
     let orders=[];
-    fs.createReadStream(file_path)
-    .pipe(parser())
+
+    fs.createReadStream(file_path).pipe(parser())
     .on("data", (row) => {
         const order = {
             id: parseInt(row.Id),
@@ -25,7 +19,6 @@ function processCSV(file_path){
             buyer: row.Buyer, 
             totalPrice: parseFloat(row.Quantity * row["Unit price"])
         };
-
         orders.push(order);
     })
     .on("end", () => {
@@ -48,5 +41,4 @@ function processCSV(file_path){
     })
 }
 
-const file_path=process.argv.slice(2)[0];
-processCSV(file_path);
+processCSV(args[0]);

@@ -3,7 +3,10 @@ const fs=require("fs");
 const parser=require("csv-parser");
 
 const args=process.argv.slice(2);
-if (args.length != 1) {process.exit(1);}
+if (args.length != 1) {
+    console.log("Argomenti linea di comando: formato non corretto.")
+    return;
+}
 
 function processCSV(file_path) {
     let orders=[];
